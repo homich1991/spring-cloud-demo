@@ -14,8 +14,10 @@ public class ReceiverApplication {
         SpringApplication.run(ReceiverApplication.class, args);
     }
 
-    @GetMapping("/say/{word}")
-    public String sayHello(@PathVariable String word) {
-        return "I said " + word;
+    @GetMapping("/multiply/{counter}")
+    public Integer multiplyCounter(@PathVariable int counter) {
+        System.out.println("I receive " + counter);
+        System.out.println("I send " + counter*2);
+        return counter * 2;
     }
 }

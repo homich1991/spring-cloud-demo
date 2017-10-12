@@ -10,6 +10,7 @@
 
 
     <name>spring-cloud-demo-sender</name>
+    <packaging>jar</packaging>
 
     <parent>
         <groupId>org.springframework.boot</groupId>
