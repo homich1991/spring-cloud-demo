@@ -9,6 +9,7 @@
     <modules>
         <module>sender</module>
         <module>receiver</module>
+        <module>eureka</module>
     </modules>
     <packaging>pom</packaging>
 
