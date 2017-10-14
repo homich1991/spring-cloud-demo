@@ -1,4 +1,4 @@
-package com.epam.springclouddemo;
+package com.epam.springclouddemo.receiver;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
