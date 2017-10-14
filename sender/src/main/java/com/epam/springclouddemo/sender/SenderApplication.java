@@ -25,7 +25,8 @@ public class SenderApplication {
 
     private AtomicInteger counter = new AtomicInteger(0);
 
-    public Integer fallback(){
+    public Integer fallback() {
+        System.out.println("Fallback here");
         return 0;
     }
 
