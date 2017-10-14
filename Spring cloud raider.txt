@@ -1,3 +1,5 @@
+Spring cloud raider notes
+
 Эврика:
 --------------------------
 Создать модуль (Spring initializer)
@@ -6,7 +8,7 @@
 в основном классе прописываем @EnableEurekaServer
 Прописываем порт - 8761
 -------------------------------
-В клиентах зависимость
+В общий помник зависимость
 
    <dependencyManagement>
         <dependencies>
@@ -20,6 +22,7 @@
         </dependencies>
     </dependencyManagement>
 	
+В клиентах зависимость
       <dependency>
             <groupId>org.springframework.cloud</groupId>
             <artifactId>spring-cloud-starter-eureka</artifactId>
@@ -31,6 +34,11 @@
 Выключить у эврики регистрацию в самой себе
 eureka.client.registerWithEureka=false
 ---------------------------------------------------
-вставляем в sender в url --RECEIVER--
+У клиентов приписываем имена приложений
+
+вставляем в sender в url RECEIVER
 
 Добавить @LoadBalanced  к RestTemplate
+======================================
+
+Feign:
