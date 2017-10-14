@@ -1,0 +1,36 @@
+Эврика:
+--------------------------
+Создать модуль (Spring initializer)
+Депенденси - Cloud Discovery -> Eureka Server
+
+в основном классе прописываем @EnableEurekaServer
+Прописываем порт - 8761
+-------------------------------
+В клиентах зависимость
+
+   <dependencyManagement>
+        <dependencies>
+            <dependency>
+                <groupId>org.springframework.cloud</groupId>
+                <artifactId>spring-cloud-dependencies</artifactId>
+                <version>Dalston.SR4</version>
+                <type>pom</type>
+                <scope>import</scope>
+            </dependency>
+        </dependencies>
+    </dependencyManagement>
+	
+      <dependency>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-starter-eureka</artifactId>
+        </dependency>
+
+В основном классе @EnableDiscoveryClient
+Прописываем имя приложения в пропертях
+
+Выключить у эврики регистрацию в самой себе
+eureka.client.registerWithEureka=false
+---------------------------------------------------
+вставляем в sender в url --RECEIVER--
+
+Добавить @LoadBalanced  к RestTemplate
