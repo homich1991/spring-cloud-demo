@@ -26,7 +26,8 @@ public class SenderApplication {
     public Integer sendCounter() {
         int counterValue = counter.addAndGet(1);
         System.out.println("I send " + counterValue);
-        Integer receivedValue = restTemplate.getForObject("http://RECEIVER/multiply/" + counterValue, Integer.class);
+        Integer receivedValue = restTemplate.getForObject("http://RECEIVER/multiply/" + counterValue,
+                Integer.class);
         System.out.println("I received " + receivedValue);
         return receivedValue;
     }
