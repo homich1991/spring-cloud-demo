@@ -1,0 +1,20 @@
+spring:
+  application:
+    name: zuul
+
+zuul:
+  #Service will be mapped under the /api URI
+  prefix: /api
+  routes:
+    sender:
+      path: /sender/**
+      serviceId: SENDER
+    receiver:
+      path: /receiver/**
+      serviceId: RECEIVER
+
+server:
+  port: 8888
+
+
+eureka.client.initial-instance-info-replication-interval-seconds: 2

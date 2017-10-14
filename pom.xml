@@ -10,6 +10,7 @@
         <module>sender</module>
         <module>receiver</module>
         <module>eureka</module>
+        <module>zuul</module>
     </modules>
     <packaging>pom</packaging>
 
