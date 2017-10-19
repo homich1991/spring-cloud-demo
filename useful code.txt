@@ -1,0 +1,27 @@
+<dependencyManagement>
+	<dependencies>
+		<dependency>
+			<groupId>org.springframework.cloud</groupId>
+			<artifactId>spring-cloud-dependencies</artifactId>
+            <version>Dalston.SR4</version>
+            <type>pom</type>
+            <scope>import</scope>
+        </dependency>
+    </dependencies>
+</dependencyManagement>
+	
+<dependency>
+    <groupId>org.springframework.cloud</groupId>
+    <artifactId>spring-cloud-starter-eureka</artifactId>
+</dependency>
+
+eureka.server.renewal-threshold-update-interval-ms=1000
+eureka.instance.lease-expiration-duration-in-seconds=2
+eureka.instance.lease-renewal-interval-in-seconds=1
+
+eureka.client.initial-instance-info-replication-interval-seconds=2
+ribbon.ServerListRefreshInterval=1000
+
+--------------------------------------------------------------
+bonus:
+hystrix.command.default.execution.timeout.enabled: false
