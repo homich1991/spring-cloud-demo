@@ -15,7 +15,7 @@ public class ReceiverApplication {
     }
 
     @GetMapping("/multiply/{counter}")
-    public Integer multiplyCounter(@PathVariable int counter) {
+    public Integer multiplyCounter(@PathVariable("counter") int counter) {
         System.out.println("I receive " + counter);
         System.out.println("I send " + counter*2);
         return counter * 2;
